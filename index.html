@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>CROS Club</title>
+  <script src="https://unpkg.com/html5-qrcode/minified/html5-qrcode.min.js"></script>
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</head>
+
+<body>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#!" class="brand-logo">CROS Club</a>
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#" id="authorize_button" style="display: none;">Authorize</a></li>
+          <li><a href="#" id="signout_button" style="display: none;">Sign Out</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="container">
+    <div class="row"></div>
+    <div class="row" id="main-ui">
+      <div class="col s4">
+        <div id="qr-reader" style="width:400px"></div>
+      <div id="qr-reader-results"></div>
+      </div>
+    <div class="col s6 offset-s2">
+      <div class="card">       
+        <div class="card-content">
+          <span class="card-title">Member Info</span>
+          <p id="no-scan">Please scan your card and make sure you are connected to the internet.</p>          
+          <div id="scan-success" class="hide">
+            booooooooooooo
+          </div>
+        </div>
+        <div class="card-action">
+          <a href="#" id="getin">Getting In</a>
+          <a class="right" href="#" id="goout">Going Out</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script async defer src="https://apis.google.com/js/api.js"
+      onload="this.onload=function(){};handleClientLoad()"
+      onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+</body>
+
+</html>
